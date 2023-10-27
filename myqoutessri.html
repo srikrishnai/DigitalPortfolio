@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>my quotes</title>
+<script>
+    var images = ["problem.jpg", "doit.jpg", "p2.jpg"]; 
+    var currentIndex = 0;
+    setInterval(nextImage, 2000);
+    showImage(currentIndex);
+    function showImage(index) {
+    var imageUrl = images[index];
+    var imgElement = document.getElementById("slideshowImage");
+    imgElement.src = imageUrl;
+    }
+    function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+    } 
+</script>    
+</head>
+<body>
+<div class="background-image">
+<br>
+<button onclick="history.back()">Go Back</button>
+<center><h1>MY QUOTES</h1></center>
+<div id="slideshow">
+<img id="slideshowImage" src="apj.jpg" alt="Slideshow Image">
+</div>
+<div class="p1">
+<br><center><p>1.<i>&nbsp;&nbsp;Everyone &nbsp;has &nbsp;problems &nbsp;in&nbsp; life.<br>Don't&nbsp; worry &nbsp;about&nbsp; today's&nbsp; problems&nbsp;,just&nbsp; move &nbsp;on&nbsp; to &nbsp;the &nbsp;fact<br> that&nbsp; 
+everything &nbsp;will change &nbsp;tomorrow..<br>It &nbsp;will&nbsp; change...<br>Because&nbsp; change &nbsp;is&nbsp; the &nbsp;only&nbsp; thing &nbsp;that&nbsp; never&nbsp; changes...</i></center></p>
+</div>
+<div class="p2">
+<br><center><p>2.<i>&nbsp;&nbsp;When &nbsp;we &nbsp;don't &nbsp;get &nbsp;what&nbsp; we&nbsp; want<br> we&nbsp; have&nbsp; to&nbsp; start &nbsp;loving<br> what&nbsp; we&nbsp; have...</i></p></center>
+</div>
+</div>
+<footer>
+    <p>&copy; 2023 SRIDEVI R</p>
+</footer>
+</body>
+<style>
+.background-image{
+    background-image:url('./write1.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    height:100vh;
+    padding-right:100px;
+}  
+#slideshowImage{
+    height:370px;
+    width:320px;
+    float:left;
+    border-radius:25px;
+    padding: 15px;
+}
+h1
+{
+font-size:45px;
+color:black;
+font-family:cursive;
+} 
+.p1{
+font-size:28px;
+color:navy;
+font-family:fantasy;
+}
+.p2{
+font-size:28px;
+color:red;
+font-family:fantasy;
+}
+button{
+    background-color:purple;
+    color:white;
+    float:right;
+}
+button:hover{
+    background-color:skyblue;
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color:black;
+    color: #fff;
+}
+</style>
+</html>
